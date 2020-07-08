@@ -17,7 +17,7 @@ python AdafruitDHT.py 11 4
 curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 ```
 ```
-echo "deb https://repos.influxdata.com/debian stretch stable" | sudo tee -a / etc/apt/sources.list.d/influxdb.list
+echo "deb https://dl.bintray.com/fg2it/deb stretch main" | sudo tee -a / etc/apt/sources.list.d/influxdb.list
 ```
 
 ```
