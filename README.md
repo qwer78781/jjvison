@@ -73,4 +73,17 @@ set ts=4   // tab size 4
 if has("syntax")  //syntax on
  syntax on
 endif
+1 set nu
+  2 set cindent
+  3 set ts=4
+  4 set softtabstop=4
+  5 set bg=dark
+  6 set expandtab
+  7 let python_version_2 = 1
+  8 let python_highlight_all = 1
+  9 filetype indent plugin on
+ 10 if has("syntax")
+ 11     syntax on
+ 12 endif
+
 ```
