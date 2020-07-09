@@ -65,3 +65,12 @@ sudo pip install influxdb
 ```
 git clone https://github.com/qwer78781/jjvison
 ```
+
+``` 
+set nu   //Line number
+set cindent  // C language indent
+set ts=4   // tab size 4
+if has("syntax")  //syntax on
+ syntax on
+endif
+```
