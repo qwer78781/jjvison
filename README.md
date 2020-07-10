@@ -246,3 +246,17 @@ endif
  23     
  24   time.sleep(5)
 ```
+import sys, serial
+device = serial.Serial('dev/ttyAMM0',38400, timeout = 5)
+def co2(update, context):
+try:
+rcvBuf = bytearray()
+device.reset_input_buffer()
+revBuf = device.read_until(size=12)
+temp = str(rcvBuf)
+a = temp.find('m')
+t = temp[0:a+1]
+update.message.reply_text(t)
+except Exception as e:
+print("Exception read"
+dp.add_handler(CommandHandler("unset", unset,pa
