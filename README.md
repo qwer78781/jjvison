@@ -219,3 +219,30 @@ endif
  20         time.sleep(5)
                            
 ```
+
+```
+  1 #!/usr/bin/python
+  2 
+  3 import sys, serial, time
+  4 
+  5 comm = '/dev/ttyAMA0'
+  6 baudrate = 38400
+  7 
+  8 device = serial/Serial(comm, baudrate, timeout = 5)
+  9 print(device)
+ 10 
+ 11 while(True)
+ 12     try:
+ 13         rcvBuf = bytearray()
+ 14         device.reset_input_buffer()
+ 15         rcvBuf = device.read_until(size=12)
+ 16         print rcvBuf
+ 17         temp = recBuf.find('p')
+ 18         a = rcvBuf[2:temp]
+ 19         b = int(a)
+ 20         print b
+ 21   except Exception as e:
+ 22       print("Exception read") + str(e)
+ 23     
+ 24   time.sleep(5)
+```
