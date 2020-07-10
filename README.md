@@ -195,3 +195,27 @@ endif
  41      print("running influxdb OK")
  42 
 ```
+
+```
+  1 #!/usr/bin/python
+  2 
+  3 import sys, serial, time
+  4 
+  5 comm = '/dev/ttyAMA0'
+  6 baudrate = 38400
+  7 
+  8 device = serial.Serial(comm, baudrate, timeout = 5)
+  9 print(device)
+ 10 
+ 11 while(True):
+ 12     try:
+ 13         rcvBuf = bytearray()
+ 14         device.reset_input_buffer()
+ 15         rcvBuf = device.read_until(size=12)
+ 16         print rcvBuf
+ 17     except Exception as e:
+ 18         print("Exception read") + str(e)
+ 19 
+ 20         time.sleep(5)
+                           
+```
